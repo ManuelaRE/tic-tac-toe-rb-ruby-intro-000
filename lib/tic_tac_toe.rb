@@ -11,6 +11,7 @@ WIN_COMBINATIONS = [
 
 board = [" "," "," "," "," "," "," "," "," "]
 
+
 def input_to_index(user_input)
   user_input.to_i - 1
 end
@@ -41,6 +42,14 @@ end
 
 def position_taken?(board, position)
   board[position] != " "
+end
+
+def move(board, location, player)
+  board[location.to_i-1] = player
+end
+
+def position_taken?(board, location)
+  board[location] != " "
 end
 
 def valid_move?(board, position)
